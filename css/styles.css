@@ -9,3 +9,45 @@
     color: white !important;
     height: 340px;
 }
+.cart-container {
+    padding: 8px;
+}
+
+.cart-item {
+    width: 400px;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+}
+
+.cart-item-content {
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.cart-image {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+#remove-from-cart-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#remove-from-cart-button:hover {
+    cursor: pointer;
+    color: red;
+}
+
+#cart-qty {
+    min-width: 24px;
+    max-width: 48px;
+}
