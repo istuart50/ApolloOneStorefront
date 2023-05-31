@@ -1,0 +1,9 @@
+.copy-info-row {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.copy-info-button {
+    width: 60%;
+}
