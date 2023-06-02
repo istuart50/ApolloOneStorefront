@@ -1,3 +1,47 @@
 h1 {
     text-align: center;
 }
+
+#productContainer {
+    justify-content: space-around;
+}
+
+.product-card {
+    width: 18rem;
+    height: 600px;
+    margin-bottom: 16px;
+}
+
+.product-card-body {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 16px;
+}
+
+.product-card-title {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product-card-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.product-card-cost {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.product-card-desc {
+    overflow-y: auto;
+    margin-bottom: 52px;
+}
+
+.product-card-button {
+    align-self: center;
+    width: 80%;
+    position: absolute;
+    bottom: 16px;
+}
