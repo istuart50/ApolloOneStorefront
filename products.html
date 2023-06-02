@@ -20,6 +20,11 @@
 
     <div>
         <h1>Products!</h1>
+        <div class="container">
+            <div id="productContainer" class="row">
+                <!--content programmatically added in index.js-->
+            </div>
+        </div>
 
         <!-- Button trigger modal -->
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
@@ -46,87 +51,7 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-        <div class="card" style="width: 18rem;">
-            <img src="images/mace.jpg" class="card-img-top" alt="Mace">
-            <div class="card-body">
-                <h5 class="card-title">Product 1</h5>
-                <p class="card-text">Description.</p>
-                <p class="card-text">Cost</p>
-                <a href="#" class="btn btn-primary">Add to Cart</a>
-            </div>
-        </div>
-
     </div>
-
-
-    <script>
-        const products = [
-            {
-                id: 'baton',
-                name: 'Baton',
-                image: 'images/baton.jpg',
-                description: 'When your enemy is coming toward you, simply swing the baton outward with force and it will become a weapon that should not be recconed with. Use the baton to whack the enemy with all of your force! Guarunteed to leave your enemy on the floor!',
-                cost: '$14.99'
-            },
-            {
-                id: 'brassKnuckles',
-                name: 'Brass Knuckles',
-                image: 'images/brass-knuckles.jpg',
-                description: 'These brass knuckles slip right over your four fingers (excluding thumb) for a five finger death punch that will have your enemy begging you to stop. That is MY purse! You will yell.',
-                cost: '$29.99'
-            },
-            {
-                id: 'hairKnife',
-                name: 'Hair Knife',
-                image: 'images/knife-hair-stick.jpg',
-                description: 'This hidden hair knife is for those of yiou who are seeking to be covert. They are best used from a distance, if you see a man approaching and he looks sleazy, do NOT be afraid to go for it!',
-                cost: '$9.99'
-            },
-            {
-                id: 'lipstickGun',
-                name: 'Lipstick Gun',
-                image: 'images/lipstick-gun.jpg',
-                description: 'This lipstick gun is also for the covert, but it can be used from short range. The calliber is small, but the bullet hole does just as much damage as a larger bullet. Simply take the gun out of your purse and pretend to apply, when your attacker makes his move simply aim and fire!',
-                cost: '$79.99'
-            },
-            {
-                id: 'mace',
-                name: 'Mace',
-                image: 'images/mace.jpg',
-                description: 'This mace is not for the faint of heart. The very opposite of covert, this item not only will help you win a fight but will ward off any likelihood of an attack in the first place. I know I would not try to attack anyone I saw walking around with this mace!',
-                cost: '$99.99'
-            },
-            {
-                id: 'ninjaStars',
-                name: 'Ninja Stars',
-                image: 'images/ninja-stars.jpg',
-                description: 'These 3-pack ninja stars can be safely hidden in your purse but do require some accuracy. It is best to practice thoroughly before use. When you are ready for action, simply aim and throw!',
-                cost: '$24.99'
-            },
-            {
-                id: 'nunchaku',
-                name: 'Nunchaku',
-                image: 'images/nunchaku.jpg',
-                description: 'Nunchaku are not for the faint of heart. They are for anime fans ONLY!!! These will require that you watch A LOT of anime to learn how to use. When you do, simply pull them out, yell loudly, and go to town on your attacker.',
-                cost: '$49.99'
-            },
-            {
-                id: 'shotgun',
-                name: 'Shotgun',
-                image: 'images/shotgun.jpg',
-                description: 'The shotgun is for everyone to use, although it should be noted that the kickback will be strong for any woman under 5 ft 6. Simply load your weapon, aim, and fire!',
-                cost: '$499.99'
-            }
-        ];
-    </script>
-
 
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
