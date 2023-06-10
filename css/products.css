@@ -45,3 +45,22 @@ h1 {
     position: absolute;
     bottom: 16px;
 }
+
+.product-detail-modal {
+    min-width: 450px;
+    max-width: 550px;
+}
+
+.product-detail-image {
+    height: 250px;
+}
+
+.product-detail-body {
+    height: 250px;
+}
+
+.product-detail-actions {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
