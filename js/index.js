@@ -153,6 +153,8 @@ $(function () {
         cart.push(product)
         displayCart()
         console.log('CART', cart)
+        $('#productModal').modal('hide')
+
     }
 
     function displayCart() {
