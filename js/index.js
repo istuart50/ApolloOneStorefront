@@ -59,10 +59,22 @@ $(function () {
         }
     ];
 
+    const cart = []
+
     const productContainer = document.querySelector('#productContainer');
 
     products.forEach((product, idx) => {
-        console.log('iterating on index:', idx, product);
+        // build cards
+        const card = buildProductCard(product);
+
+
+        // end build cards including event listener below
+
+        productContainer.append(card);
+    });
+
+    function buildProductCard(product) {
+        console.log('iterating on index:', product);
         const card = document.createElement('div');
         card.classList.add('card', 'product-card');
         const cardContent = `
@@ -78,27 +90,110 @@ $(function () {
         `;
         card.innerHTML = cardContent;
         const button = card.querySelector('#addToCart')
-        button.addEventListener('click', (e) => {
-            console.log(product.name)
-            const productModal = document.querySelector('#productModal')
-            productModal.querySelector('.modal-title').innerHTML = 'Product Detail'
-            const modalBody = `
 
-                <div class="media">
-                    <img src="${product.image}" class="mr-3 product-detail-image" alt="${product.name}">
-                    <div class="media-body product-detail-body">
-                        <div class="row product-card-title">
-                            <span class="col-sm-8 card-title product-card-name">${product.name}</span>
-                            <span class="col-sm-4 card-title product-card-cost">${product.cost}</span>
+        button.addEventListener('click', () => showProductModal(product));
+
+        return card;
+    }
+
+    function showProductModal(product) {
+        console.log(product.name)
+        // build modal
+        buildProductModal(product);
+        // end build modal plus listener below
+        $('#productModal').modal('show')
+
+    }
+
+    function buildProductModal(product) {
+        const productModal = document.querySelector('#productModal')
+        productModal.querySelector('.modal-title').innerHTML = 'Product Detail'
+
+        const modalBody = `
+
+            <div class="media">
+                <img src="${product.image}" class="mr-3 product-detail-image" alt="${product.name}">
+                <div class="media-body product-detail-body">
+                    <div class="row product-card-title">
+                        <span class="col-sm-8 card-title product-card-name">${product.name}</span>
+                        <span class="col-sm-4 card-title product-card-cost">${product.cost}</span>
+                    </div>
+                    <p>${product.description}</p>
+                </div>
+            </div>
+
+        `
+        productModal.querySelector('.modal-body').innerHTML = modalBody
+        const actionHtml = `
+        <button type="button" class="btn btn-danger col-3" data-dismiss="modal">Cancel</button>
+
+        <div class="col-3">
+            <label for="cart-qty">
+                Qty:
+            </label>
+            <input id="cart-qty" type="number" min="1" max="10" step="1" value="1">
+        </div>
+
+        <button id="product-detail-add-to-cart-btn" type="button" class="btn btn-primary col-3">Add
+            to
+            Cart</button>
+        `
+        productModal.querySelector('.product-detail-actions').innerHTML = actionHtml
+
+        productModal.querySelector('#product-detail-add-to-cart-btn')
+            .addEventListener('click', () => handleAddToCart(product))
+
+    }
+
+    function handleAddToCart(product) {
+        // add to cart button
+        const qty = document.querySelector('#cart-qty').value
+        console.log(product, qty)
+        product.qty = qty
+        cart.push(product)
+        displayCart()
+        console.log('CART', cart)
+    }
+
+    function displayCart() {
+        const cartDropdown = document.querySelector('.cart-container')
+        cartDropdown.innerHTML = ''
+        cart.forEach((item) => {
+            console.log('CART ITEM', item)
+            const cartItem = document.createElement('div')
+            cartItem.classList.add('dropdown-item', 'cart-item')
+            const cartItemContent = `
+                <div class="col-2">
+                    <img class="cart-image" src="${item.image}">
+                </div>
+    
+                <div class="col-8">
+                    <div class="row cart-item-content">
+    
+                        <div class="col-9">
+                            <h6>${item.name}</h6>
                         </div>
-                        <p>${product.description}</p>
+                        <div class="col-3">
+                            ${item.cost}
+                        </div>
+                    </div>
+                    <div class="row cart-item-content">
+                        <div class="col-9">
+                           Quantity:
+                        </div>
+                        <div class="col-3">
+                            <input id="cart-qty" type="number" min="0" max="10" step="1" value="${item.qty}">
+                        </div>
                     </div>
                 </div>
-
+                <div class="col-2" id="remove-from-cart-button">
+                    X
+                </div>
             `
-            productModal.querySelector('.modal-body').innerHTML = modalBody
-            $('#productModal').modal('show')
-        });
-        productContainer.append(card);
-    });
+            cartItem.innerHTML = cartItemContent
+            cartDropdown.append(cartItem)
+        })
+
+    }
+
 })
