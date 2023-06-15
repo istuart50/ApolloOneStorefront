@@ -63,15 +63,17 @@ $(function () {
 
     const productContainer = document.querySelector('#productContainer');
 
-    products.forEach((product, idx) => {
-        // build cards
-        const card = buildProductCard(product);
+    if (productContainer) {
+        products.forEach((product, idx) => {
+            // build cards
+            const card = buildProductCard(product);
 
 
-        // end build cards including event listener below
+            // end build cards including event listener below
 
-        productContainer.append(card);
-    });
+            productContainer.append(card);
+        });
+    }
 
     function buildProductCard(product) {
         console.log('iterating on index:', product);
