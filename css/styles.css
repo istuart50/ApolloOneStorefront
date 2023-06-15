@@ -9,6 +9,7 @@
     color: white !important;
     height: 340px;
 }
+
 .cart-container {
     padding: 8px;
 }
@@ -50,4 +51,10 @@
 #cart-qty {
     min-width: 24px;
     max-width: 48px;
+}
+
+.site-footer {
+    background-image: linear-gradient(violet, pink);
+    padding: 20px 0;
+    margin-top: 16px;
 }
