@@ -9,6 +9,7 @@
     color: white !important;
     height: 340px;
 }
+
 .cart-container {
     padding: 8px;
 }
@@ -50,4 +51,27 @@
 #cart-qty {
     min-width: 24px;
     max-width: 48px;
+}
+
+body {
+    background-image: linear-gradient(rgb(250, 12, 190), white);
+
+}
+
+h1 {
+    text-shadow: 4px 4px pink;
+}
+
+.card {
+    box-shadow: 16px 16px pink;
+}
+
+.btn {
+    background-color: purple;
+    color: white;
+    box-shadow: 4px 4px pink;
+}
+
+.btn:hover {
+    background-color: violet;
 }
