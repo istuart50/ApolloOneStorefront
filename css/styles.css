@@ -63,25 +63,6 @@ h1 {
     padding: 75px;
     text-align: center;
     text-decoration: underline;
-    animation-name: example;
-}
-
-@keyframes example {
-    0% {
-        background-color: red;
-    }
-
-    25% {
-        background-color: yellow;
-    }
-
-    50% {
-        background-color: blue;
-    }
-
-    100% {
-        background-color: green;
-    }
 }
 
 .card {
