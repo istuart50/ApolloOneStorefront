@@ -1,3 +1,9 @@
+.nav-color-bg {
+    background-color: rgb(253, 102, 127);
+}
+
+
+
 .jumbotron {
 
     background:
@@ -9,6 +15,7 @@
     color: white !important;
     height: 340px;
 }
+
 .cart-container {
     padding: 8px;
 }
