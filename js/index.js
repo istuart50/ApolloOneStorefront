@@ -162,6 +162,11 @@ $(function () {
     function displayCart() {
         const cartDropdown = document.querySelector('.cart-container')
         cartDropdown.innerHTML = ''
+        if (cart.length === 0) {
+            cartDropdown.innerHTML = `<div class="dropdown-item cart-item">
+            No products to display.
+            </div>`
+        }
         cart.forEach((item) => {
             console.log('CART ITEM', item)
             const cartItem = document.createElement('div')
@@ -195,9 +200,30 @@ $(function () {
                 </div>
             `
             cartItem.innerHTML = cartItemContent
+            const removeButton = cartItem.querySelector('#remove-from-cart-button')
+            removeButton.addEventListener('click', (e) => {
+                e.stopPropagation()
+                e.preventDefault()
+                removeItem(item)
+                displayCart()
+            })
             cartDropdown.append(cartItem)
         })
 
+    }
+
+    function removeItem(product) {
+        console.log("remove item firing", product)
+        const index = cart.findIndex((cartItem) => {
+            if (cartItem.name === product.name) {
+                return true;
+            }
+            return false;
+        })
+        if (index !== -1) {
+            cart.splice(index, 1);
+        }
+        console.log('cart state', cart)
     }
 
 })
