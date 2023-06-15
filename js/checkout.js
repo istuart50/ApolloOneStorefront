@@ -1,9 +1,25 @@
-// $(function () {
-// this waits for jquery and html to load.
-// before, running all the code.
-// until react all code livs in this.
+
 console.log('Checkout Loaded.');
 
+const checkoutButton = document.querySelector("#submitCheckout");
+checkoutButton.addEventListener('click', handleSubmitCheckout)
+function handleSubmitCheckout() {
+    const confirmDiv = `
+    <div class="col-md-12 checkout-lines">
+    Order submitted, thank you!
+    </div>
+    <div class="col-md-12 checkout-lines">
+    How did we place your order without a credit card?
+    </div>
+    <div class="col-md-12 checkout-lines">
+    That's for us to know, and for you to not recieve your product, 
+    <span style="font-weight: bold;">
+    THANKS!!
+    </span>
+    </div>`
+    document.querySelector('#checkoutRow').innerHTML = confirmDiv
+    console.log('firing')
+}
 
 document.querySelector('#copy-info-button').addEventListener('click', (e) => {
 
@@ -29,4 +45,4 @@ document.querySelector('#copy-info-button').addEventListener('click', (e) => {
     shippingZip.value = `${billingZip.value}`
 
 });
-// })
+

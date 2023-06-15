@@ -7,3 +7,12 @@
 .copy-info-button {
     width: 60%;
 }
+
+.checkout-row {
+    justify-content: center;
+}
+
+.checkout-lines {
+    text-align: center;
+    margin-top: 8px;
+}
