@@ -16,6 +16,10 @@
     height: 340px;
 }
 
+.carousel-inner-height {
+    height: 650px;
+}
+
 .cart-container {
     padding: 8px;
 }
