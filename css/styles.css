@@ -1,3 +1,9 @@
+.nav-color-bg {
+    background-color: rgb(66, 66, 66);
+}
+
+
+
 .jumbotron {
 
     background:
@@ -8,6 +14,10 @@
     background-attachment: fixed;
     color: white !important;
     height: 340px;
+}
+
+.carousel-inner-height {
+    height: 650px;
 }
 
 .cart-container {
