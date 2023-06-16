@@ -1,15 +1,14 @@
-h1 {
-    text-align: center;
-}
-
 #productContainer {
     justify-content: space-around;
+    margin-top: 76px;
 }
 
 .product-card {
     width: 18rem;
     height: 600px;
-    margin-bottom: 16px;
+    margin-bottom: 36px;
+    background-color: #f7e4fcf8;
+    box-shadow: 16px 16px #F48FB1;
 }
 
 .product-card-body {
@@ -37,6 +36,20 @@ h1 {
 .product-card-desc {
     overflow-y: auto;
     margin-bottom: 52px;
+}
+
+.product-card-desc::-webkit-scrollbar {
+    width: 8px;
+}
+
+.product-card-desc::-webkit-scrollbar-track {
+    background: #F48FB1;
+    border-radius: 10px;
+}
+
+.product-card-desc::-webkit-scrollbar-thumb {
+    background: #4A148C;
+    border-radius: 10px;
 }
 
 .product-card-button {

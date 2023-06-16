@@ -1,8 +1,6 @@
-.nav-color-bg {
-    background-color: rgb(66, 66, 66);
+.nav-custom {
+    background-color: #4A148C;
 }
-
-
 
 .jumbotron {
 
@@ -16,7 +14,7 @@
     height: 340px;
 }
 
-.carousel-inner-height {
+.carousel-inner-custom {
     height: 650px;
 }
 
@@ -61,4 +59,28 @@
 #cart-qty {
     min-width: 24px;
     max-width: 48px;
+}
+
+body {
+    background-image: linear-gradient(to bottom left, #880E4F, #F06292, #7E57C2);
+
+}
+
+.page-title {
+    text-shadow: 4px 4px pink;
+    padding: 75px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.button-primary {
+    background-color: #4A148C;
+    color: white;
+    box-shadow: 4px 4px #F48FB1;
+
+}
+
+.button-primary:hover {
+    background-color: #7B1FA2;
+    color: white;
 }
