@@ -2,16 +2,27 @@
     background-color: #4A148C;
 }
 
+.landing-custom-background {
+    background-color: white;
+}
+
 .jumbotron {
 
     background:
-        linear-gradient(rgba(0, 0, 250, 0.25),
-            rgba(125, 250, 250, 0.45)),
-        url(https://source.unsplash.com/1600x1050/?nature);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: white !important;
+        linear-gradient(rgba(253, 0, 232, 0.25),
+            rgba(52, 3, 97, 0.45)),
+        url(/images/168686317399804841\ \(1\).gif);
+    background-repeat: repeat;
+    background-attachment: center;
+    color: rgb(255, 255, 255) !important;
     height: 340px;
+}
+
+.white-text-with-pink-shadow {
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(250, 185, 230), 0 0 0.2em rgb(255, 0, 200);
+    color: white;
+    font: 1.1rem Verdana;
+    font-weight: bolder;
 }
 
 .carousel-inner-custom {
