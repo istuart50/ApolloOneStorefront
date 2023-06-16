@@ -87,7 +87,7 @@ $(function () {
                     <span class="col-sm-4 card-title product-card-cost">${product.cost}</span>
                 </div>
                 <p class="card-text product-card-desc">${product.description}</p>
-                <a id="addToCart" class="btn btn-primary product-card-button">Add to Cart</a>
+                <a id="addToCart" class="btn product-card-button button-primary">Add to Cart</a>
             </div>
         `;
         card.innerHTML = cardContent;

@@ -17,7 +17,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top nav-color-bg">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top nav-custom">
         <a class="navbar-brand" href="./index.html">
             <img src="./images/brand.png" height="50" class="d-inline-block align-top" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -41,7 +41,9 @@
                         Cart
                     </a>
                     <div class="dropdown-menu cart-container">
-
+                        <div class="dropdown-item cart-item">
+                            No products to display.
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -49,15 +51,16 @@
     </nav>
 
 
-    <div>
-        <h1>Checkout!</h1>
-    </div>
+
 
     <div class="container">
-        <div class="row">
+        <div class="row checkout-forms-row">
             <div class="col-6">
 
                 <form>
+                    <div class="form-row">
+                        <h3 class="checkout-form-header">Billing Info</h3>
+                    </div>
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="billingEmail">Email</label>
@@ -103,8 +106,11 @@
 
                 <form>
                     <div class="form-row">
+                        <h3 class="checkout-form-header">Shipping Info</h3>
+                    </div>
+                    <div class="form-row">
                         <div class="form-group col-md-12 copy-info-row">
-                            <button id="copy-info-button" class="btn btn-primary copy-info-button" type="button">Copy
+                            <button id="copy-info-button" class="btn button-primary copy-info-button" type="button">Copy
                                 Billing
                                 Info</button>
                         </div>
@@ -144,7 +150,7 @@
             </div>
         </div>
         <div id="checkoutRow" class="row checkout-row">
-            <button id="submitCheckout" type="button" class="btn btn-primary">Submit Order</button>
+            <button id="submitCheckout" type="button" class="btn button-primary">Submit Order</button>
         </div>
     </div>
 

@@ -17,7 +17,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top nav-color-bg">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top nav-custom">
         <a class="navbar-brand" href="./index.html">
             <img src="./images/brand.png" height="50" class="d-inline-block align-top" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
@@ -41,44 +41,43 @@
                         Cart
                     </a>
                     <div class="dropdown-menu cart-container">
-
+                        <div class="dropdown-item cart-item">
+                            No products to display.
+                        </div>
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
 
-
-    <div>
-        <h1>Products!</h1>
-        <div class="container">
-            <div id="productContainer" class="row">
-                <!--content programmatically added in index.js-->
-            </div>
+    <div class="container">
+        <div id="productContainer" class="row">
+            <!--content programmatically added in index.js-->
         </div>
+    </div>
 
-        <!-- Modal -->
-        <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-            <div class="modal-dialog product-detail-modal">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="productModalLabel">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
+    <!-- Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog product-detail-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
 
-                    </div>
-                    <div class="modal-footer">
-                        <div class="row product-detail-actions">
+                </div>
+                <div class="modal-footer">
+                    <div class="row product-detail-actions">
 
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <footer class="site-footer">
         <div class="container">
