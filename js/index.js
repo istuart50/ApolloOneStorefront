@@ -151,13 +151,14 @@ $(function () {
         productModal.querySelector('.product-detail-actions').innerHTML = actionHtml
 
         productModal.querySelector('#product-detail-add-to-cart-btn')
-            .addEventListener('click', () => handleAddToCart(product))
+            .addEventListener('click', () => handleAddToCart(product, productModal))
 
     }
 
-    function handleAddToCart(product) {
+    function handleAddToCart(product, productModal) {
         // add to cart button
-        const qty = document.querySelector('#cart-qty').value
+        const qty = productModal.querySelector('#cart-qty').value
+        console.log('product', {product, qty})
         console.log(product, qty)
         product.qty = qty
         cart.push(product)
