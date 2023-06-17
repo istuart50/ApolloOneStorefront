@@ -56,7 +56,15 @@ $(function () {
             image: 'images/shotgun.jpg',
             description: 'The shotgun is for everyone to use, although it should be noted that the kickback will be strong for any woman under 5 ft 6. Simply load your weapon, aim, and fire!',
             cost: '$499.99'
+        },
+        {
+            id: 'stungun',
+            name: 'Stun Gun',
+            image: 'images/L-100-PINK-3.jpg',
+            description: 'For those who want to be on the safe side, without the maiming. Enough power to make the person on the recieving end regret ever being born.',
+            cost: '$9.99'
         }
+
     ];
 
     const cart = []

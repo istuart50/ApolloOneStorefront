@@ -1,3 +1,7 @@
+body {
+    height: 100vh;
+}
+
 .checkout-forms-row {
     padding-top: 48px;
     padding-bottom: 16px;
@@ -7,6 +11,10 @@
     text-align: center;
     margin: auto;
     text-decoration: underline;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(250, 185, 230), 0 0 0.2em rgb(255, 0, 200);
+    color: white;
+    font: 1.8rem Verdana;
+    font-weight: bolder;
 }
 
 .copy-info-row {
@@ -28,10 +36,8 @@
     margin-top: 8px;
 }
 
-/* form {
-    border: solid;
-    padding: 15px;
-    margin: 15px;
-    background-color: #f7e4fcf8;
-    box-shadow: 16px 16px #F48FB1;
-} */
+.checkout-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}

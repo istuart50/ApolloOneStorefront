@@ -2,20 +2,37 @@
     background-color: #4A148C;
 }
 
-.jumbotron {
-
-    background:
-        linear-gradient(rgba(0, 0, 250, 0.25),
-            rgba(125, 250, 250, 0.45)),
-        url(https://source.unsplash.com/1600x1050/?nature);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    color: white !important;
-    height: 340px;
+.landing-custom-background {
+    background-color: white;
+    padding: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    background-image: url('../images/b90d8525715132c40466b8a99d97c1bb.jpg');
 }
 
-.carousel-inner-custom {
-    height: 650px;
+.landing-page-jumbotron {
+
+    background:
+        linear-gradient(rgba(253, 0, 232, 0.25),
+            rgba(52, 3, 97, 0.45)),
+        url(/images/168686317399804841\ \(1\).gif);
+    background-repeat: repeat;
+    background-attachment: center;
+    color: rgb(255, 255, 255);
+    min-height: 340px;
+}
+
+.white-text-with-pink-shadow {
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(250, 185, 230), 0 0 0.2em rgb(255, 0, 200);
+    color: white;
+    font: 1.1rem Verdana;
+    font-weight: bolder;
+}
+
+.carousel-image {
+    margin-bottom: 3.6%;
+    width: 100%;
 }
 
 .cart-container {
@@ -83,4 +100,44 @@ body {
 .button-primary:hover {
     background-color: #7B1FA2;
     color: white;
+}
+
+.site-footer {
+    margin-top: 16px;
+    border-top: 1px solid white;
+    padding: 32px;
+    background-color: #7C4DFF;
+}
+
+.footer-header {
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(250, 185, 230), 0 0 0.2em rgb(255, 0, 200);
+    color: white;
+    font: Verdana;
+    font-weight: bolder;
+}
+
+.footer-icons-row {
+    justify-content: center;
+}
+
+.footer-icons {
+    width: 40px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(250, 185, 230), 0 0 0.2em rgb(255, 0, 200);
+    color: white;
+    font: 0.8rem Verdana;
+}
+
+.footer-links a,
+.contact-links {
+    text-decoration: none;
+    text-shadow: 1px 1px 2px black, 0 0 1em rgb(250, 185, 230), 0 0 0.2em rgb(255, 0, 200);
+    color: white;
+    font: 0.8rem Verdana;
+    font-weight: bolder;
 }
